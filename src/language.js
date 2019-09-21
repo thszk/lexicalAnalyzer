@@ -10,6 +10,7 @@ const language = {
       { name: 'else', value: 'simbolo_senao'},
       { name: 'read', value: 'simbolo_ler'},
       { name: 'write', value: 'simbolo_escrever'},
+      { name: 'do', value: 'simbolo_faca'},
       { name: 'while', value: 'simbolo_enquanto'},
       { name: 'if', value: 'simbolo_se'},
       { name: 'then', value: 'simbolo_entao'},
@@ -31,9 +32,9 @@ const language = {
       { name: '/', value: 'simbolo_div' },
     ],
     others: [
-      { name: /(\d)/, value: 'numero_inteiro' },
-      { name: /(\d*.\d*)/, value: 'numero_real' },
-      { name: /(\w)/, value: 'identificador' },
+      { name: /[a-zA-Z_].*[0-9]?.*[a-zA-Z_]?/, value: 'identificador' },
+      { name: /[0-9].*\.[0-9].*/, value: 'numero_real' },
+      { name: /[0-9]+/, value: 'numero_inteiro' },
     ]
 }
 

@@ -22,7 +22,7 @@ const findInGrammar = (target, index) => {
     match = language.symbols.find(element => element.name === target)
   
   if (!match)
-    match = language.others.find(element => target.match(element.name)) // tem que validar se o target é uma das regex contidas em language.others
+    match = language.others.find(element => target.match(element.name))
   
   // console.log(match);
   return match ? { name: target, value: match.value, index } : undefined
