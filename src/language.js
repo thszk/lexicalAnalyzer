@@ -23,6 +23,7 @@ const language = {
       { name: '=', value: 'simbolo_igual' },
       { name: '>=', value: 'simbolo_maior_igual' },
       { name: '<=', value: 'simbolo_menor_igual' },
+      { name: ':=', value: 'simbolo_atribuicao' },
       { name: '>', value: 'simbolo_maior' },
       { name: '<', value: 'simbolo_menor' },
       { name: '<>', value: 'simbolo_maior_menor' },
@@ -30,6 +31,8 @@ const language = {
       { name: '-', value: 'simbolo_menos' },
       { name: '*', value: 'simbolo_vezes' },
       { name: '/', value: 'simbolo_div' },
+      { name: '(', value: 'simbolo_abre_parentese' },
+      { name: ')', value: 'simbolo_fecha_parentese' },
     ],
     others: [
       { name: /^[a-zA-Z_].*[0-9]?.*[a-zA-Z_]?/, value: 'identificador' },
