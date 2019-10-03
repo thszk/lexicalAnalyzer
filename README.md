@@ -7,6 +7,8 @@ That's project implements a Lexical Analyzer to LALG language. This language has
 
 Automata: https://github.com/fschaefer/Stately.js/
 
+Regular Expression tester: https://regexr.com/
+
 JavaScript Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
 
 JavaScript Reference: https://www.w3schools.com/jsref/default.asp
