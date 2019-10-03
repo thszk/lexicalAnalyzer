@@ -1,16 +1,16 @@
-program nome1 ;
+programnome1;.;
 {exemplo 1}
 var a, a1, b: integer;
 begin
-read(a, b);
+read(ab,3.4);
 {       exemplo 1}
-a1:= a + b;
+a1:==:=: a + b;
 while a1>a do
 begin
 write(a1);
 a1:= a1-1;
-{ exemplo 1 }
+{a exemplo+=_}
 end;
 if a<> b then
-write(a);
-end.
+write(a);@#@
+end.$#
