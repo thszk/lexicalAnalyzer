@@ -1,18 +1,16 @@
 # LALG
 
-Implementação de um analisador léxico para LALG, uma linguagem de propósito acadêmico.
+That's project implements a Lexical Analyzer to LALG language. This language has a academic proposal to study compilers.
 
 
-## Referências
+## References
 
-remove espaços: https://www.w3schools.com/jsref/jsref_regexp_whitespace.asp
+Automata: https://github.com/fschaefer/Stately.js/
 
-leitura de arquivos: https://nodejs.org/dist/latest-v6.x/docs/api/fs.html
+JavaScript Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
 
-automato: https://github.com/fschaefer/Stately.js/
+JavaScript Reference: https://www.w3schools.com/jsref/default.asp
 
-array.forEach: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+Node.js: https://nodejs.org/docs/latest-v10.x/api/
 
-array.endsWith: https://www.w3schools.com/jsref/jsref_endswith.asp
-
-node console color: https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
+Node.js console color: https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
