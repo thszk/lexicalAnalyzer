@@ -33,3 +33,11 @@ end;
 if a<> b then
 write(a);
 end.
+
+
+
+prog@das4287&874328!432.;gfdg]ht[
+
+
+geth 034yrt34r,3q4r
+}

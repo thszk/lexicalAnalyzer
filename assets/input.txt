@@ -7,10 +7,10 @@ read(ab,3.4);
 a1:==:=: a + b;
 while a1>a do
 begin
-wri#te(a1);
+write(a1);
 a1:= a1-1;
 {a exemplo+=_}
 end;
 if a<> b then
-write(a);;#@
+write(a);@#@
 end.$#

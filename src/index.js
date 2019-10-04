@@ -21,7 +21,7 @@ const codeCleaner = (code) => {
 }
 
 // find in language grammar
-const findInGrammar = (target, index) => {
+const findInGrammar = (target) => {
   let match = language.keywords.find(element => element.name === target)
 
   if (!match)
@@ -37,13 +37,14 @@ const findInGrammar = (target, index) => {
 const find = (code) => {
   let tokens = [], newToken, error = ''
   code.forEach((element, index) => {
-    newToken = findInGrammar(element, index)
+    newToken = findInGrammar(element)
     if (newToken) {
       tokens.push(newToken)
       if (newToken.value === "erro_lexico")
         error = `${error}\n${accuseError(newToken)}\n`
     } 
   })  
+  // console.table(tokens);
   return error ? error : tokens
 }
 
@@ -53,7 +54,7 @@ const accuseError = (error) => {
   let column = originalCode[line].indexOf(error.name)
   // create error message
   let err = `\x1b[41m${error.value}\x1b[0m em linha \x1b[41m${line+1}\x1b[0m.`
-  let pos = `Não esperado caractere \x1b[33m${error.name}\x1b[0m na coluna \x1b[33m${column+1}\x1b[0m`
+  let pos = `Não esperado \x1b[33m${error.name}\x1b[0m na coluna \x1b[33m${column+1}\x1b[0m`
   let lin = `[${line+1}]      ${originalCode[line]}`
 
   return `${err} ${pos}\n\n${lin}`

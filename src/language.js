@@ -38,7 +38,7 @@ const language = {
     others: [
       { name: /^[a-zA-Z_].*[0-9]?.*[a-zA-Z_]?/, value: 'identificador' },
       { name: /[0-9].*\.[0-9].*/, value: 'numero_real' },
-      { name: /[0-9]+/, value: 'numero_inteiro' },
+      { name: /[0-9]+$/, value: 'numero_inteiro' },
       { name: /.+/, value: 'erro_lexico' },
     ]
 }
