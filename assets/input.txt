@@ -12,5 +12,5 @@ a1:= a1-1;
 {a exemplo+=_}
 end;
 if a<> b then
-write(a);@#@
+write(a);;#@
 end.$#
