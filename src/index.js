@@ -41,9 +41,9 @@ const find = (code) => {
     if (newToken) {
       tokens.push(newToken)
       if (newToken.value === "erro_lexico")
-        error = error + '\n' + accuseError(newToken)
+        error = `${error}\n${accuseError(newToken)}\n`
     } 
-  })
+  })  
   return error ? error : tokens
 }
 
