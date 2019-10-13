@@ -12,12 +12,12 @@ const codeCleaner = (code) => {
   originalCode = code.split(/\r\n|\r|\n/)
   return code
     .replace(/{(.|\n)*?}|{(.|\n)*/g, ' ') // comments
-    .replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^\w\s])/g, ' $1 ') // symbols
+    .replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^a-zA-Z\s])/g, ' $1 ') // symbols
     .split(/\s+/) // spaces
   // the second replace function above has the signify
   // :=|<=|>=|<> it's compounds symbols OR
   // (\d+(\.\d+)+) it's float number OR
-  // [^\w\s] it's blank spaces
+  // [^a-zA-Z\s] isn't letters or blank spaces
 }
 
 // find in language grammar
