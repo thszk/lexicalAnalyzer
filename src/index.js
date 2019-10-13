@@ -11,9 +11,9 @@ const readCode = () => fs.readFileSync(path.resolve('./assets/input.txt'), 'utf-
 const codeCleaner = (code) => {
   originalCode = code.split(/\r\n|\r|\n/)
   return code
-            .replace(/{(.|\n)*?}|{(.|\n)*/g, ' ') // comments
-            .replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^\w\s])/g, ' $1 ') // symbols
-            .split(/\s+/) // spaces
+    .replace(/{(.|\n)*?}|{(.|\n)*/g, ' ') // comments
+    .replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^\w\s])/g, ' $1 ') // symbols
+    .split(/\s+/) // spaces
   // the second replace function above has the signify
   // :=|<=|>=|<> it's compounds symbols OR
   // (\d+(\.\d+)+) it's float number OR
