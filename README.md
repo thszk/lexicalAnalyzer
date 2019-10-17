@@ -10,9 +10,9 @@ That's project implements a Lexical Analyzer to LALG language. This language has
 
 ## Usage
 
-Put the LALG's source code at ```assets/``` directory at file named ```input.txt```.
+Save your LALG source code as ```input.txt``` inside the ```assets/``` directory.
 
-With terminal opened at project directory, run the command ```$ node src/index``` to starts lexical analysis, this will dump at screen the output of process. Thats may be a sequence of tokens or a error warning.
+With the terminal opened at the project directory, run the command ```$ node src/index``` to start the lexical analysis, then the output of the process will be shown on the screen. The results may be a sequence of tokens or a warning error.
 
 
 ## References
