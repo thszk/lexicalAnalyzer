@@ -7,6 +7,8 @@ That's project implements a Lexical Analyzer to LALG language. This language has
 
 [Node.js](https://nodejs.org/en/) v10.x
 
+Installer to [Windows](https://nodejs.org/dist/v10.16.3/node-v10.16.3-x64.msi), [Mac](https://nodejs.org/dist/v10.16.3/node-v10.16.3.pkg) and [Linux](https://nodejs.org/en/download/package-manager/) (depending your distro).
+
 
 ## Usage
 

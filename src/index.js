@@ -9,12 +9,12 @@ const readCode = () => fs.readFileSync(path.resolve('./assets/input.txt'), 'utf-
 
 // method to remove comments | add spaces before and after a alphanum character | creates an array from cleaned code
 const codeCleaner = (code) => {
-  originalCode = code.split(/\r\n|\r|\n/)
+  originalCode = code.replace(/{(.|\n)*?}|{(.|\n)*/g, ' ').split(/\r\n|\r|\n/)
 
   code = code.replace(/{(.|\n)*?}|{(.|\n)*/g, ' ') // comments
   code = code.replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^\w\s])/g, ' $1 ') // symbols
   code = code.split(/\s+/) // spaces
-  
+
   return code
 }
 
@@ -61,7 +61,7 @@ const accuseError = (error) => {
 const lexicalAnalyzer = () => {
   const {tokens, error} = find(codeCleaner(readCode()))
   console.table(tokens)
-  console.log(error);
+  console.log(error)
 }
 
 lexicalAnalyzer()

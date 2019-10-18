@@ -3,7 +3,7 @@ program nome;
 var a, a1, b: integer;
 begin
 read(ab,3.4);
-{   #$ #$ #$ _ _    exemplo 1}
+{   #$ _    exemplo 1}
 a1 :== a + b;
 while a1>a do
 begin
@@ -15,4 +15,4 @@ if a<> b then
 write(a);
 {>: po_32 _ela 0291_=ll poe1 102p}
 end.
-po_32
+{po_32}
