@@ -36,9 +36,9 @@ const language = {
       { name: '}', value: 'simbolo_fecha_chave' },
     ],
     others: [
-      { name: /^[a-zA-Z]+[0-9]*[a-zA-Z]*/, value: 'identificador' },
-      { name: /[0-9].*\.[0-9].*/, value: 'numero_real' },
-      { name: /[0-9]+$/, value: 'numero_inteiro' },
+      { name: /^[a-zA-Z]+[a-zA-Z0-9]*$/, value: 'identificador' },
+      { name: /^[0-9].*\.[0-9].*/, value: 'numero_real' },
+      { name: /^[0-9]+$/, value: 'numero_inteiro' },
       { name: /.+/, value: 'erro_lexico' },
     ]
 }

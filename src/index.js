@@ -10,14 +10,12 @@ const readCode = () => fs.readFileSync(path.resolve('./assets/input.txt'), 'utf-
 // method to remove comments | add spaces before and after a alphanum character | creates an array from cleaned code
 const codeCleaner = (code) => {
   originalCode = code.split(/\r\n|\r|\n/)
+
+  code = code.replace(/{(.|\n)*?}|{(.|\n)*/g, ' ') // comments
+  code = code.replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^\w\s])/g, ' $1 ') // symbols
+  code = code.split(/\s+/) // spaces
+  
   return code
-    .replace(/{(.|\n)*?}|{(.|\n)*/g, ' ') // comments
-    .replace(/(:=|<=|>=|<>|(\d+(\.\d+)+)|[^a-zA-Z\s])/g, ' $1 ') // symbols
-    .split(/\s+/) // spaces
-  // the second replace function above has the signify
-  // :=|<=|>=|<> it's compounds symbols OR
-  // (\d+(\.\d+)+) it's float number OR
-  // [^a-zA-Z\s] isn't letters or blank spaces
 }
 
 // find in language grammar
@@ -43,12 +41,11 @@ const find = (code) => {
       if (newToken.value === "erro_lexico")
         error = `${error}\n${accuseError(newToken)}\n`
     } 
-  })  
-  // console.table(tokens);
-  return error ? error : tokens
+  })
+  return {tokens, error}
 }
 
-// accuse lexical error and your position on code
+// accuse lexical error and his position on code
 const accuseError = (error) => {
   let line = originalCode.findIndex(element => element.includes(error.name))
   let column = originalCode[line].indexOf(error.name)
@@ -60,6 +57,11 @@ const accuseError = (error) => {
   return `${err} ${pos}\n\n${lin}`
 }
 
-const lexicalAnalyzer = () => find(codeCleaner(readCode()))
+// master function
+const lexicalAnalyzer = () => {
+  const {tokens, error} = find(codeCleaner(readCode()))
+  console.table(tokens)
+  console.log(error);
+}
 
-console.table(lexicalAnalyzer())
+lexicalAnalyzer()
