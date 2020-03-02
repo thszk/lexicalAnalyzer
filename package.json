@@ -4,7 +4,7 @@
   "description": "Lexical and Sintatic Analyzer to LALG language",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint --fix src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js"
   },
