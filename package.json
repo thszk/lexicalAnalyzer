@@ -1,0 +1,46 @@
+{
+  "name": "lalgcompiler",
+  "version": "1.2.0",
+  "description": "Lexical and Sintatic Analyzer to LALG language",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thszk/lexicalAnalyzer.git"
+  },
+  "author": "Thiago Suzuqui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thszk/lexicalAnalyzer/issues"
+  },
+  "homepage": "https://github.com/thszk/lexicalAnalyzer#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "quotes": ["error", "single"],
+      "semi": ["error", "never"],
+      "indent": ["error", 2]
+    }
+  }
+}
