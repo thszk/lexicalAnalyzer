@@ -34,11 +34,11 @@ const findInGrammar = (target) => {
 // tokenization
 const find = (code) => {
   let tokens = [], newToken, error = ''
-  code.forEach((element, index) => {
+  code.forEach(element => {
     newToken = findInGrammar(element)
     if (newToken) {
       tokens.push(newToken)
-      if (newToken.value === "erro_lexico")
+      if (newToken.value === 'erro_lexico')
         error = `${error}\n${accuseError(newToken)}\n`
     } 
   })
